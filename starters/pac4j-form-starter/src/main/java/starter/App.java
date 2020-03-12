@@ -39,6 +39,7 @@ public class App extends Jooby {
     );
 
     get("/", ctx -> new ModelAndView("welcome.hbs").put("user", ctx.getUser()));
+    post("/test", ctx -> "ok");
   }
 
   private Authenticator<UsernamePasswordCredentials> authenticator() {
